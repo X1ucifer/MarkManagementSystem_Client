@@ -59,7 +59,7 @@ export default function Students() {
 
     useEffect(() => {
         loadStudent();
-    }, []);
+    }, [student]);
 
     const loadStudent = async () => {
         const { data } = await axios.get(`/api/all`);
@@ -77,9 +77,9 @@ export default function Students() {
 
             {student.map(item => (
                 <>
-                    <div className={classes.stud} onClick={() => setStudentId(item._id)}>
+                    <div className={classes.stud} onClick={()=> setStudentId(item._id)}>
 
-                        <Avatar onClick={handleOpen} style={{ marginLeft: "4px", cursor: "pointer" }} src="/broken-image.jpg" />
+                        <Avatar onClick={handleOpen}  style={{ marginLeft: "4px", cursor: "pointer" }} src="/broken-image.jpg" />
 
                         <h3 onClick={handleOpen}  style={{ paddingLeft: "10px", cursor: "pointer" }} >{item.name}</h3>
 

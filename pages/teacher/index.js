@@ -3,14 +3,17 @@ import Grid from '@mui/material/Grid';
 import Leftbar from "../componenets/teacher/Leftbar"
 import Add from "../componenets/teacher/Add"
 import Students from "../componenets/teacher/studentUpdate"
+import UserRoute from "../componenets/routes/UserRoute"
 
 export default function Teacher() {
     return (
-        <div>
-            
-            <Add/>
+        <UserRoute>
+            <div>
 
-            <Students/>
-        </div>
+                <Add />
+
+                <Students />
+            </div>
+        </UserRoute>
     )
 }
